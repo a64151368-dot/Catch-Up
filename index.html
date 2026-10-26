@@ -366,6 +366,14 @@ footer nav a:hover{background:var(--sun)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .trk .bar{border:0;backdrop-filter:none;-webkit-backdrop-filter:none;z-index:auto}
+.tool .lk{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tool .ab{display:inline-flex;align-items:center;gap:4px;height:30px;padding:0 10px 0 12px;border:0;border-radius:999px;background:#fff;color:#A0400F;font:inherit;font-size:13px;font-weight:900;text-decoration:none;cursor:pointer;box-shadow:0 2px 6px -2px rgba(120,90,10,.35);transition:transform .2s,background .2s}
+.tool .ab:hover,.tool .ab:focus-visible{background:#A0400F;color:#fff;transform:translateY(-1px)}
+.tool .ab svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.tool .ab svg.pl,.tool .ab svg.pa{fill:currentColor;stroke:none}
+.tool .ab .pa,.tool .ab.on .pl{display:none}.tool .ab.on .pa{display:inline}
+.tool .ab.on{background:#A0400F;color:#fff}
+.tool .ab.ghost{padding:0;width:30px;justify-content:center}
 </style>
 </head>
 <body>
@@ -477,7 +485,7 @@ footer nav a:hover{background:var(--sun)}
 
   <div class="kit stk-board">
     <article class="tool st-a" style="--r:-2deg"><span class="tape" aria-hidden="true"></span><span class="tag">формат</span><h3>Взаємодія</h3><ul>
-      <li><b>Маршрутний лист</b>Учень разом зі мною відмічає, які теми вже засвоєні, а які ще треба надолужити. Свій трек він бачить сам.</li>
+      <li><b>Карта предмета</b>Усі теми курсу на одному аркуші. Разом з учнем позначаємо, що вже засвоєно, а що ще треба надолужити. Так дитина сама бачить, де вона зараз і куди рухається далі.</li>
       <li><b>Рівний рівному</b>Учні в парах пояснюють одне одному складні завдання, я координую.</li>
       <li><b>Міні-дискусії</b>Обговорюємо проблемне питання або життєвий кейс замість лекції.</li></ul></article>
     <article class="tool st-b" style="--r:1.5deg"><span class="tape" aria-hidden="true"></span><span class="tag">формат</span><h3>Гра і цифра</h3><ul>
@@ -487,8 +495,8 @@ footer nav a:hover{background:var(--sun)}
       <li><b>Check-in і check-out</b>«Якою тваринкою ти сьогодні почуваєшся?» на вході. «Що вдалося найкраще і де було важко?» на виході.</li>
       <li><b>Розмова один на один</b>Хвалю за прогрес і розбираю помилки разом, без критики.</li></ul></article>
     <article class="tool alert st-d" style="--r:2deg"><span class="tape" aria-hidden="true"></span><span class="tag">важливо</span><h3>Коли лунає тривога</h3><ul>
-      <li><b>Вправи на заземлення</b>Ліцей у прифронтовій зоні. Прості дихальні техніки при тривозі — постійна частина заняття, а не виняток.</li>
-      <li><b>Рухові паузи</b>Хвилина руху посеред уроку, коли видно, що діти втомилися від екрана.</li></ul></article>
+      <li><b>Вправи на заземлення</b>Ліцей у прифронтовій зоні. Прості дихальні техніки при тривозі — постійна частина заняття, а не виняток.<span class="lk"><button type="button" class="ab" id="gbtn" aria-label="Слухати аудіовправу на заземлення"><svg class="pl" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg><svg class="pa" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/></svg>Слухати</button><a class="ab ghost" href="https://github.com/a64151368-dot/Catch-Up/blob/main/Grounding%20Audio%20Practice%20(uk).mp3" target="_blank" rel="noopener" aria-label="Відкрити аудіо на GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a><audio id="gaudio" preload="none"><source src="https://raw.githubusercontent.com/a64151368-dot/Catch-Up/main/Grounding%20Audio%20Practice%20(uk).mp3" type="audio/mpeg"><source src="https://cdn.jsdelivr.net/gh/a64151368-dot/Catch-Up@main/Grounding%20Audio%20Practice%20(uk).mp3" type="audio/mpeg"></audio></span></li>
+      <li><b>Рухові паузи</b>Хвилина руху посеред уроку, коли видно, що діти втомилися від екрана.<span class="lk"><a class="ab" href="https://youtu.be/l0bBKxU2hbY" target="_blank" rel="noopener" aria-label="Рухова пауза 1, відео на YouTube">1<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a><a class="ab" href="https://youtu.be/2zgT28hN_9A" target="_blank" rel="noopener" aria-label="Рухова пауза 2, відео на YouTube">2<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a><a class="ab" href="https://youtu.be/90fPNzq1MkM" target="_blank" rel="noopener" aria-label="Рухова пауза 3, відео на YouTube">3<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a><a class="ab" href="https://www.youtube.com/watch?v=H3jbfL0zUYo" target="_blank" rel="noopener" aria-label="Рухова пауза 4, відео на YouTube">4<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg></a></span></li></ul></article>
   </div>
 
   <div class="mine note-pad"><span class="pad-title">Мій досвід<small>три висновки з занять</small></span>
@@ -570,6 +578,12 @@ footer nav a:hover{background:var(--sun)}
   v.addEventListener('pause',function(){on(false)});
   v.addEventListener('ended',function(){on(false)});
 })();
+</script>
+<script>
+(function(){var b=document.getElementById('gbtn'),a=document.getElementById('gaudio');if(!b||!a)return;
+function st(on){b.classList.toggle('on',on);b.setAttribute('aria-label',on?'Поставити аудіо на паузу':'Слухати аудіовправу на заземлення');}
+b.addEventListener('click',function(){if(a.paused){var p=a.play();if(p&&p.catch)p.catch(function(){window.open(b.nextElementSibling.href,'_blank','noopener');st(false);});}else a.pause();});
+a.addEventListener('play',function(){st(true)});a.addEventListener('pause',function(){st(false)});a.addEventListener('ended',function(){st(false)});})();
 </script>
 </body>
 </html>
